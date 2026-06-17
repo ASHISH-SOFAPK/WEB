@@ -3,67 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashish Web Developer</title>
+    <title>Ashish | Developer Portfolio</title>
+    <link rel="manifest" href="manifest.json">
     <style>
-        :root { --primary: #00d4ff; --bg: #0a0a0a; --card: #16161a; }
-        body { background: var(--bg); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         
-        .header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid var(--primary); padding-bottom: 20px; }
-        .header h1 { color: var(--primary); margin: 0; }
-        
-        .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .project-card { background: var(--card); padding: 20px; border-radius: 15px; border: 1px solid #333; transition: 0.3s; }
-        .project-card:hover { border-color: var(--primary); transform: translateY(-5px); }
-        .project-card h3 { color: var(--primary); margin-top: 0; }
-        .project-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 10px; }
+        body { 
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); 
+            color: white; 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            min-height: 100vh;
+        }
 
-        .contact-section { margin-top: 40px; display: flex; flex-direction: column; gap: 15px; }
-        .btn { padding: 15px; border-radius: 10px; text-align: center; text-decoration: none; font-weight: bold; color: white; display: block; }
-        .wa { background: #25D366; }
-        .call { background: #007bff; }
-        .mail { background: #d93025; }
+        .header { text-align: center; margin: 40px 0; }
+        .header h1 { font-size: 2.2rem; color: #00d4ff; margin-bottom: 5px; }
+        .header p { opacity: 0.8; font-weight: 300; }
+
+        .card { 
+            background: rgba(255, 255, 255, 0.05); 
+            padding: 20px; 
+            border-radius: 20px; 
+            margin-bottom: 20px; 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .card h3 { color: #00d4ff; margin: 0 0 10px 0; }
+
+        .contact-box { margin-top: 30px; display: grid; gap: 15px; }
+        .btn { 
+            padding: 18px; 
+            border-radius: 15px; 
+            text-align: center; 
+            text-decoration: none; 
+            font-weight: 600; 
+            color: white; 
+            transition: 0.3s;
+        }
+        .wa { background: #25D366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+        .call { background: #007bff; box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); }
+        .mail { background: #d93025; box-shadow: 0 4px 15px rgba(217, 48, 37, 0.3); }
+        .btn:active { transform: scale(0.95); }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1>ASHISH WEB DEVELOPER</h1>
-        <p>Expert in Mobile App & Software Solutions</p>
+        <h1>ASHISH</h1>
+        <p>Software & App Development Studio</p>
     </div>
 
-    <div class="dashboard">
-        <!-- Project 1 -->
-        <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1551650975-87de19403771?w=500" alt="Android">
-            <h3>Android APK Creation</h3>
-            <p>Custom native apps built with Android Studio. High-performance, secure, and modern UI.</p>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1617042375876-a13e36732a04?w=500" alt="Flutter">
-            <h3>Flutter Development</h3>
-            <p>Cross-platform mobile apps using Flutter. Single codebase for Android & iOS.</p>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500" alt="Web">
-            <h3>Web Development</h3>
-            <p>High-end responsive websites, dashboards, and automated web scraping solutions.</p>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500" alt="AI">
-            <h3>AI Bot & Automation</h3>
-            <p>Intelligent AI bots, WhatsApp automation, and custom scripts for business efficiency.</p>
-        </div>
+    <div class="card">
+        <h3>🚀 Mobile APK Solutions</h3>
+        <p>Flutter & Android Studio development for high-performance apps.</p>
+    </div>
+    <div class="card">
+        <h3>🤖 AI & Automation</h3>
+        <p>Smart WhatsApp bots and custom business workflow scripts.</p>
+    </div>
+    <div class="card">
+        <h3>💻 Web Development</h3>
+        <p>Responsive dashboards, UI/UX, and robust web applications.</p>
     </div>
 
-    <div class="contact-section">
-        <a href="https://wa.me/917530919863" class="btn wa">WhatsApp Me</a>
-        <a href="tel:+917530919863" class="btn call">Call Now: 7530919863</a>
+    <div class="contact-box">
+        <a href="https://wa.me/917530919863" class="btn wa">WhatsApp Chat</a>
+        <a href="tel:+917530919863" class="btn call">Call Me Directly</a>
         <a href="mailto:ashish95823@gmail.com" class="btn mail">Email: ashish95823@gmail.com</a>
     </div>
 
