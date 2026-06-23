@@ -10,44 +10,53 @@
         body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; margin: 0; }
         .container { max-width: 1000px; margin: auto; padding: 40px; }
         
-        /* Glassmorphism Dashboard Cards */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
-        .card { background: rgba(255,255,255,0.03); padding: 30px; border-radius: 20px; border: 1px solid #222; transition: 0.4s; }
-        .card:hover { border-color: var(--gold); transform: translateY(-10px); }
-        .card i { color: var(--gold); font-size: 2rem; margin-bottom: 15px; }
+        /* Chart Box */
+        .chart-container { margin: 40px 0; border: 2px solid var(--gold); border-radius: 15px; overflow: hidden; height: 500px; }
 
-        /* Enquiry Section with WhatsApp Integration */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: rgba(255,255,255,0.03); padding: 30px; border-radius: 20px; border: 1px solid #222; }
         .enquiry { background: rgba(212, 175, 55, 0.05); padding: 50px; border-radius: 25px; margin-top: 60px; text-align: center; border: 1px solid var(--gold); }
         input, textarea { width: 90%; padding: 15px; margin: 10px 0; border-radius: 12px; border: 1px solid #333; background: #000; color: #fff; }
-        .submit-btn { background: var(--gold); color: #000; border: none; padding: 18px 50px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        .submit-btn:hover { box-shadow: 0 0 20px var(--gold); }
+        .submit-btn { background: var(--gold); color: #000; border: none; padding: 18px 50px; border-radius: 50px; font-weight: bold; cursor: pointer; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1 style="text-align:center; font-size: 3.5rem; color: var(--gold);">ASHISH</h1>
-    <p style="text-align:center; color: #888;">Professional Algo-Trading & Software Solutions</p>
-
-    <!-- Professional Buttons -->
-    <div style="text-align:center; margin: 30px 0;">
-        <a href="tel:7530919863" style="color:var(--gold); margin: 0 20px;"><i class="fas fa-phone"></i> +91 7530919863</a>
-        <a href="mailto:ashish95823@gmail.com" style="color:var(--gold); margin: 0 20px;"><i class="fas fa-envelope"></i> ashish95823@gmail.com</a>
+    <h1 style="text-align:center; color: var(--gold);">ASHISH</h1>
+    
+    <!-- TradingView Chart Widget -->
+    <div class="chart-container">
+        <div class="tradingview-widget-container" style="height:100%;width:100%">
+            <div id="tradingview_chart" style="height:100%;width:100%"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <script type="text/javascript">
+            new TradingView.widget({
+              "autosize": true,
+              "symbol": "NSE:NIFTY",
+              "interval": "D",
+              "timezone": "Asia/Kolkata",
+              "theme": "dark",
+              "style": "1",
+              "locale": "en",
+              "toolbar_bg": "#f1f3f6",
+              "enable_publishing": false,
+              "container_id": "tradingview_chart"
+            });
+            </script>
+        </div>
     </div>
 
-    <!-- Dashboard Section -->
     <div class="grid">
-        <div class="card"><i class="fas fa-robot"></i> <h2>Algo Trading</h2><p>High-frequency MQL5/PineScript bots with institutional grade logic.</p></div>
-        <div class="card"><i class="fas fa-mobile-alt"></i> <h2>APK Dev</h2><p>Custom Android applications designed for speed and security.</p></div>
-        <div class="card"><i class="fab fa-whatsapp"></i> <h2>WhatsApp Bot</h2><p>Automate your business marketing and support using AI.</p></div>
-        <div class="card"><i class="fas fa-code"></i> <h2>Software Dev</h2><p>Scalable, robust, and full-stack software development.</p></div>
+        <div class="card"><i class="fas fa-robot"></i> <h2>Algo Trading</h2><p>High-frequency MQL5/PineScript bots.</p></div>
+        <div class="card"><i class="fas fa-mobile-alt"></i> <h2>APK Dev</h2><p>Custom Android applications.</p></div>
+        <div class="card"><i class="fab fa-whatsapp"></i> <h2>WhatsApp Bot</h2><p>AI-driven business automation.</p></div>
     </div>
 
-    <!-- Enquiry Form -->
     <div class="enquiry">
         <h2>Initiate Project Connection</h2>
         <input type="text" id="name" placeholder="Your Name" required><br>
-        <textarea id="message" placeholder="Describe your project (Algo/APK/Bot)..." rows="4"></textarea><br>
+        <textarea id="message" placeholder="Describe your project..." rows="4"></textarea><br>
         <button onclick="sendWhatsApp()" class="submit-btn">SEND TO WHATSAPP</button>
     </div>
 </div>
@@ -56,8 +65,7 @@
     function sendWhatsApp() {
         const name = document.getElementById('name').value;
         const msg = document.getElementById('message').value;
-        const phone = "7530919863";
-        window.open(`https://wa.me/${phone}?text=Project Inquiry from ${name}: ${msg}`, '_blank');
+        window.open(`https://wa.me/7530919863?text=Project Inquiry from ${name}: ${msg}`, '_blank');
     }
 </script>
 </body>
