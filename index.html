@@ -3,39 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashish | Algo Trader & Developer</title>
+    <title>Ashish | Algo Trading Architecture</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; text-align: center; }
-        .container { max-width: 800px; margin: auto; padding: 40px; background: #1e293b; border-radius: 15px; }
-        h1 { color: #38bdf8; }
-        .section { margin-top: 30px; padding: 20px; border-bottom: 1px solid #334155; }
-        .skill { display: inline-block; background: #38bdf8; color: #000; padding: 8px 15px; margin: 5px; border-radius: 20px; font-weight: bold; }
+        :root { --primary: #00ff9d; --bg: #0a0a0c; --card: #16161a; --text: #e4e4e7; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; }
+        header { padding: 50px 20px; text-align: center; }
+        h1 { font-size: 3rem; color: var(--primary); margin: 0; }
+        .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: auto; }
+        .card { background: var(--card); padding: 25px; border-radius: 12px; border: 1px solid #333; transition: 0.3s; }
+        .card:hover { border-color: var(--primary); }
+        .tag { background: #26262a; color: var(--primary); padding: 5px 12px; border-radius: 4px; font-size: 0.8rem; }
+        footer { text-align: center; padding: 40px; color: #666; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Ashish | Algo Trading Specialist</h1>
-        <p>Building automated systems for the financial markets.</p>
+    <header>
+        <h1>ASHISH SUMAN</h1>
+        <p>Algorithmic Trading & Financial Automation Architect</p>
+    </header>
 
-        <div class="section">
-            <h2>My Skills</h2>
-            <div class="skill">MQL5 Development</div>
-            <div class="skill">Algo Trading Automation</div>
-            <div class="skill">TradingView Pine Script</div>
-            <div class="skill">Python & Webhooks</div>
+    <div class="dashboard">
+        <div class="card">
+            <span class="tag">MQL5 DEVELOPMENT</span>
+            <h3>GOLD_FINAL_ROBOT</h3>
+            <p>High-performance scalping engine for XAUUSD. Features VWAP-based entry and multi-timeframe breakout logic.</p>
         </div>
-
-        <div class="section">
-            <h2>Current Projects</h2>
-            <p><strong>GOLD_FINAL_ROBOT:</strong> A high-frequency trading bot for gold using VWAP and multi-TF breakouts.</p>
-            <p><strong>Dhan-TradingView Bridge:</strong> Automated execution system for Nifty/BankNifty options.</p>
+        <div class="card">
+            <span class="tag">WEBHOOK AUTOMATION</span>
+            <h3>TradingView -> Dhan Bridge</h3>
+            <p>Ultra-low latency bridge for automated options execution. Signal-to-order time: &lt; 1 second.</p>
         </div>
-
-        <div class="section">
-            <h2>Contact</h2>
-            <p>Email: ashish95823@gmail.com</p>
-            <p>GitHub: github.com/your-username</p>
+        <div class="card">
+            <span class="tag">CORE TECH STACK</span>
+            <h3>Technology Arsenal</h3>
+            <p>MQL5, Pine Script, Python, RESTful Webhooks, Financial Data API Integration.</p>
         </div>
     </div>
+
+    <footer>
+        <p>Contact: ashish95823@gmail.com | Available for Custom Algo Development</p>
+    </footer>
 </body>
 </html>
