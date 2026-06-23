@@ -3,59 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASHISH | Professional Dev Studio</title>
+    <title>ASHISH | Premium Dev Studio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --accent: #00ff9d; --bg: #050505; }
+        :root { --gold: #d4af37; --bg: #050505; }
         body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; margin: 0; }
-        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .container { max-width: 900px; margin: auto; padding: 40px; }
         
-        /* Buttons Style */
-        .btn-group { display: flex; gap: 15px; justify-content: center; margin: 30px 0; }
-        .btn { padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; display: flex; align-items: center; gap: 10px; }
-        .btn-call { border: 2px solid var(--accent); color: var(--accent); }
-        .btn-call:hover { background: var(--accent); color: #000; }
-        .btn-mail { border: 2px solid #00bfff; color: #00bfff; }
-        .btn-mail:hover { background: #00bfff; color: #000; }
+        /* Gold Buttons */
+        .btn-group { display: flex; gap: 20px; justify-content: center; margin: 30px 0; }
+        .btn { padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; border: 2px solid var(--gold); color: var(--gold); }
+        .btn:hover { background: var(--gold); color: #000; }
 
-        /* Dashboard Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: rgba(255,255,255,0.05); padding: 25px; border-radius: 20px; border: 1px solid #222; }
-        
-        /* Enquiry Section */
-        .enquiry { background: #111; padding: 40px; border-radius: 20px; margin-top: 50px; text-align: center; border: 1px solid #333; }
-        input, textarea { width: 80%; padding: 15px; margin: 10px 0; border-radius: 10px; border: none; background: #222; color: #fff; }
-        .submit-btn { background: var(--accent); color: #000; border: none; padding: 15px 40px; border-radius: 10px; font-weight: bold; cursor: pointer; }
+        /* Gold Card */
+        .card { background: linear-gradient(145deg, #1a1a1a, #0d0d0d); padding: 30px; border-radius: 20px; border: 1px solid var(--gold); transition: 0.4s; }
+        .card h2 { color: var(--gold); }
+
+        /* Gold Enquiry Form */
+        .enquiry { background: #111; padding: 40px; border-radius: 20px; border: 1px solid var(--gold); text-align: center; }
+        input, textarea { width: 85%; padding: 15px; margin: 10px 0; border-radius: 10px; border: 1px solid #444; background: #000; color: #fff; }
+        .submit-btn { background: var(--gold); color: #000; border: none; padding: 18px 50px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .submit-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--gold); }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1 style="text-align:center; font-size: 3rem;">ASHISH</h1>
-    <p style="text-align:center; color: #888;">Algo Trading & Enterprise Software Solutions</p>
+    <h1 style="text-align:center; font-size: 3.5rem; color: var(--gold);">ASHISH</h1>
+    <p style="text-align:center; color: #aaa; letter-spacing: 2px;">ALGO TRADING & SOFTWARE ARCHITECT</p>
 
     <div class="btn-group">
-        <a href="tel:7530919863" class="btn btn-call"><i class="fas fa-phone"></i> +91 7530919863</a>
-        <a href="mailto:ashish95823@gmail.com" class="btn btn-mail"><i class="fas fa-envelope"></i> Email Me</a>
+        <a href="tel:7530919863" class="btn"><i class="fas fa-phone"></i> CALL NOW</a>
+        <a href="mailto:ashish95823@gmail.com" class="btn"><i class="fas fa-envelope"></i> EMAIL ME</a>
     </div>
 
-    <div class="grid">
-        <div class="card"><h2><i class="fas fa-robot"></i> Algo Trading</h2><p>Custom MQL5 & Pine Script development for automated market execution.</p></div>
-        <div class="card"><h2><i class="fas fa-mobile-alt"></i> APK Dev</h2><p>Robust Android applications built for performance and security.</p></div>
-        <div class="card"><h2><i class="fab fa-whatsapp"></i> WhatsApp Bot</h2><p>AI-driven business automation and customer support bots.</p></div>
-        <div class="card"><h2><i class="fas fa-code"></i> Software</h2><p>Scalable full-stack software solutions from architecture to deployment.</p></div>
+    <div class="grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <div class="card"><h2><i class="fas fa-robot"></i> Algo Trading</h2><p>MQL5, Pine Script & Institutional Order Flow.</p></div>
+        <div class="card"><h2><i class="fab fa-whatsapp"></i> WhatsApp Bot</h2><p>AI-driven business automation solutions.</p></div>
+        <div class="card"><h2><i class="fas fa-mobile-alt"></i> APK Dev</h2><p>High-performance Android App development.</p></div>
+        <div class="card"><h2><i class="fas fa-code"></i> Software</h2><p>Full-stack scalable software development.</p></div>
     </div>
 
     <div class="enquiry">
-        <h2>Start a Project</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required><br>
-            <input type="email" placeholder="Your Email" required><br>
-            <textarea placeholder="Describe your project..." rows="4"></textarea><br>
-            <button type="submit" class="submit-btn">SEND ENQUIRY</button>
+        <h2 style="color: var(--gold);">ENQUIRE NOW</h2>
+        <form id="whatsappForm">
+            <input type="text" id="name" placeholder="Your Name" required><br>
+            <textarea id="message" placeholder="Describe your project (Algo/APK/WhatsApp Bot)..." rows="4" required></textarea><br>
+            <button type="button" onclick="sendToWhatsApp()" class="submit-btn">SEND TO WHATSAPP</button>
         </form>
     </div>
 </div>
+
+<script>
+    function sendToWhatsApp() {
+        const name = document.getElementById('name').value;
+        const msg = document.getElementById('message').value;
+        const phone = "7530919863"; // Aapka number
+        const url = `https://wa.me/${phone}?text=Hello Ashish, My name is ${name}. Project details: ${msg}`;
+        window.open(url, '_blank');
+    }
+</script>
 
 </body>
 </html>
