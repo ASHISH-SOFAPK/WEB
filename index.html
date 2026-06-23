@@ -3,45 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashish | Algo Trading Architecture</title>
+    <title>ASHISH | Professional Developer & Algo Specialist</title>
     <style>
-        :root { --primary: #00ff9d; --bg: #0a0a0c; --card: #16161a; --text: #e4e4e7; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; }
-        header { padding: 50px 20px; text-align: center; }
-        h1 { font-size: 3rem; color: var(--primary); margin: 0; }
-        .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: auto; }
-        .card { background: var(--card); padding: 25px; border-radius: 12px; border: 1px solid #333; transition: 0.3s; }
-        .card:hover { border-color: var(--primary); }
-        .tag { background: #26262a; color: var(--primary); padding: 5px 12px; border-radius: 4px; font-size: 0.8rem; }
-        footer { text-align: center; padding: 40px; color: #666; }
+        body { background: #050505; color: #fff; font-family: 'Inter', sans-serif; margin: 0; }
+        .hero { height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .hero h1 { font-size: 4rem; margin: 0; background: linear-gradient(90deg, #00ff9d, #00bfff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px; max-width: 1100px; margin: auto; }
+        .card { background: rgba(255,255,255,0.03); border: 1px solid #333; padding: 30px; border-radius: 20px; backdrop-filter: blur(10px); transition: 0.4s; }
+        .card:hover { transform: translateY(-10px); border-color: #00ff9d; }
+        .card h2 { color: #00ff9d; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>ASHISH SUMAN</h1>
-        <p>Algorithmic Trading & Financial Automation Architect</p>
-    </header>
-
-    <div class="dashboard">
-        <div class="card">
-            <span class="tag">MQL5 DEVELOPMENT</span>
-            <h3>GOLD_FINAL_ROBOT</h3>
-            <p>High-performance scalping engine for XAUUSD. Features VWAP-based entry and multi-timeframe breakout logic.</p>
-        </div>
-        <div class="card">
-            <span class="tag">WEBHOOK AUTOMATION</span>
-            <h3>TradingView -> Dhan Bridge</h3>
-            <p>Ultra-low latency bridge for automated options execution. Signal-to-order time: &lt; 1 second.</p>
-        </div>
-        <div class="card">
-            <span class="tag">CORE TECH STACK</span>
-            <h3>Technology Arsenal</h3>
-            <p>MQL5, Pine Script, Python, RESTful Webhooks, Financial Data API Integration.</p>
-        </div>
+    <div class="hero">
+        <h1>ASHISH</h1>
+        <p>Full-Stack Developer • Algo Architect • Automation Expert</p>
     </div>
 
-    <footer>
-        <p>Contact: ashish95823@gmail.com | Available for Custom Algo Development</p>
-    </footer>
+    <div class="grid">
+        <div class="card">
+            <h2>Algo Trading</h2>
+            <p>Developing high-frequency MQL5 bots for XAUUSD & Nifty. Specializing in institutional order flow and low-latency execution.</p>
+        </div>
+        <div class="card">
+            <h2>WhatsApp Automation</h2>
+            <p>Custom-built WhatsApp Bots for business marketing, automated customer support, and instant notification systems.</p>
+        </div>
+        <div class="card">
+            <h2>APK Development</h2>
+            <p>Professional Android application development. Creating clean, robust, and user-friendly mobile solutions.</p>
+        </div>
+        <div class="card">
+            <h2>Software Development</h2>
+            <p>End-to-end custom software solutions. From system architecture to deployment, I build scalable tech for your needs.</p>
+        </div>
+    </div>
 </body>
 </html>
