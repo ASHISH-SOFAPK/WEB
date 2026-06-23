@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHISH | Dev Studio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { background: #000; color: #d4af37; font-family: 'Courier New', monospace; margin: 0; overflow-x: hidden; }
+        :root { --gold: #d4af37; --bg: #050505; }
+        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; margin: 0; }
+        .container { max-width: 1000px; margin: auto; padding: 40px; }
         
-        /* Glitch Effect on Title */
-        .glitch { font-size: 8rem; font-weight: 900; position: relative; text-shadow: 2px 2px #ff00ff; animation: glitch 1s linear infinite; }
-        @keyframes glitch { 0% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; } 50% { text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff; } }
-        
-        /* Interactive Cards */
-        .grid-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 50px; }
-        .card { width: 300px; height: 350px; border: 2px solid #d4af37; padding: 20px; position: relative; overflow: hidden; transition: 0.5s; }
-        .card:hover { background: #d4af37; color: #000; transform: scale(1.05); }
-        
-        /* Matrix-like Inputs */
-        .input-group { max-width: 500px; margin: 50px auto; border-left: 5px solid #d4af37; padding: 20px; }
-        input, textarea { width: 100%; background: #111; border: none; border-bottom: 2px solid #d4af37; color: #d4af37; padding: 10px; margin: 10px 0; }
-        button { background: #d4af37; color: #000; padding: 20px; width: 100%; border: none; font-weight: bold; cursor: crosshair; }
+        /* Glassmorphism Dashboard Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
+        .card { background: rgba(255,255,255,0.03); padding: 30px; border-radius: 20px; border: 1px solid #222; transition: 0.4s; }
+        .card:hover { border-color: var(--gold); transform: translateY(-10px); }
+        .card i { color: var(--gold); font-size: 2rem; margin-bottom: 15px; }
+
+        /* Enquiry Section with WhatsApp Integration */
+        .enquiry { background: rgba(212, 175, 55, 0.05); padding: 50px; border-radius: 25px; margin-top: 60px; text-align: center; border: 1px solid var(--gold); }
+        input, textarea { width: 90%; padding: 15px; margin: 10px 0; border-radius: 12px; border: 1px solid #333; background: #000; color: #fff; }
+        .submit-btn { background: var(--gold); color: #000; border: none; padding: 18px 50px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .submit-btn:hover { box-shadow: 0 0 20px var(--gold); }
     </style>
 </head>
 <body>
 
-<div style="text-align:center; padding-top: 100px;">
-    <h1 class="glitch">ASHISH</h1>
-    <p>SYSTEM // ARCHITECT // ALGO_TRADER</p>
-</div>
+<div class="container">
+    <h1 style="text-align:center; font-size: 3.5rem; color: var(--gold);">ASHISH</h1>
+    <p style="text-align:center; color: #888;">Professional Algo-Trading & Software Solutions</p>
 
-<div class="grid-container">
-    <div class="card"><h2>ALGO_BOTS</h2><p>Institutional grade latency-free trading automation.</p></div>
-    <div class="card"><h2>APK_DEV</h2><p>Next-gen mobile architecture.</p></div>
-    <div class="card"><h2>WHATSAPP_BOT</h2><p>AI-Driven business engagement systems.</p></div>
-</div>
+    <!-- Professional Buttons -->
+    <div style="text-align:center; margin: 30px 0;">
+        <a href="tel:7530919863" style="color:var(--gold); margin: 0 20px;"><i class="fas fa-phone"></i> +91 7530919863</a>
+        <a href="mailto:ashish95823@gmail.com" style="color:var(--gold); margin: 0 20px;"><i class="fas fa-envelope"></i> ashish95823@gmail.com</a>
+    </div>
 
-<div class="input-group">
-    <h3>>_ INITIATE_CONNECTION</h3>
-    <input type="text" id="name" placeholder="IDENTIFICATION...">
-    <textarea id="msg" placeholder="SYSTEM_REQUEST..."></textarea>
-    <button onclick="exec()">EXECUTE_REQUEST</button>
+    <!-- Dashboard Section -->
+    <div class="grid">
+        <div class="card"><i class="fas fa-robot"></i> <h2>Algo Trading</h2><p>High-frequency MQL5/PineScript bots with institutional grade logic.</p></div>
+        <div class="card"><i class="fas fa-mobile-alt"></i> <h2>APK Dev</h2><p>Custom Android applications designed for speed and security.</p></div>
+        <div class="card"><i class="fab fa-whatsapp"></i> <h2>WhatsApp Bot</h2><p>Automate your business marketing and support using AI.</p></div>
+        <div class="card"><i class="fas fa-code"></i> <h2>Software Dev</h2><p>Scalable, robust, and full-stack software development.</p></div>
+    </div>
+
+    <!-- Enquiry Form -->
+    <div class="enquiry">
+        <h2>Initiate Project Connection</h2>
+        <input type="text" id="name" placeholder="Your Name" required><br>
+        <textarea id="message" placeholder="Describe your project (Algo/APK/Bot)..." rows="4"></textarea><br>
+        <button onclick="sendWhatsApp()" class="submit-btn">SEND TO WHATSAPP</button>
+    </div>
 </div>
 
 <script>
-    function exec() {
+    function sendWhatsApp() {
         const name = document.getElementById('name').value;
-        const msg = document.getElementById('msg').value;
-        window.open(`https://wa.me/7530919863?text=Studio_Enquiry_From_${name}: ${msg}`, '_blank');
+        const msg = document.getElementById('message').value;
+        const phone = "7530919863";
+        window.open(`https://wa.me/${phone}?text=Project Inquiry from ${name}: ${msg}`, '_blank');
     }
 </script>
-
 </body>
 </html>
