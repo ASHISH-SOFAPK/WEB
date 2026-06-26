@@ -5,77 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashish | Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body { background: #050505; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; }
-        .hero-gradient { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .text-cyan { color: #00d4ff; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        /* 3D Animated Name */
+        .name-3d {
+            font-size: 4rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            animation: colorChange 5s infinite alternate, float 3s ease-in-out infinite;
+            text-shadow: 0 10px 20px rgba(0,212,255,0.3);
+        }
+        @keyframes colorChange {
+            0% { color: #00d4ff; }
+            50% { color: #ffffff; }
+            100% { color: #4f46e5; }
+        }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+        /* Floating Call Button */
+        .float-call {
+            position: fixed; bottom: 30px; right: 30px;
+            background: #007bff; color: white; padding: 20px;
+            border-radius: 50%; box-shadow: 0 10px 25px rgba(0,123,255,0.4);
+            font-size: 24px; z-index: 1000; animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0,123,255,0.7); } 70% { box-shadow: 0 0 0 20px rgba(0,123,255,0); } }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header class="hero-gradient p-12 text-center border-b border-gray-800">
-        <h1 class="text-5xl font-extrabold text-white">&lt;Ashish /&gt;</h1>
-        <p class="text-cyan mt-3 text-lg">Full-Stack Developer & Automation Expert</p>
+    <!-- Header Section with 3D Name -->
+    <header class="p-20 text-center">
+        <h1 class="name-3d">&lt;ASHISH /&gt;</h1>
+        <p class="text-slate-400 mt-4 text-xl">Full-Stack Developer & Automation Expert</p>
     </header>
 
-    <div class="max-w-4xl mx-auto p-6">
+    <div class="max-w-3xl mx-auto p-6">
         
-        <!-- Expertise Section -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-6 text-cyan">My Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="glass p-5 rounded-2xl">
-                    <h3 class="font-bold text-white">Android APK Development</h3>
-                    <p class="text-sm text-slate-400">Building custom native and cross-platform apps using Flutter and Android Studio.</p>
-                </div>
-                <div class="glass p-5 rounded-2xl">
-                    <h3 class="font-bold text-white">AI Automation</h3>
-                    <p class="text-sm text-slate-400">Smart AI solutions for business workflows and data-driven tasks.</p>
-                </div>
-                <div class="glass p-5 rounded-2xl">
-                    <h3 class="font-bold text-white">WhatsApp Bot Development</h3>
-                    <p class="text-sm text-slate-400">Automated messaging bots to scale customer support and engagement.</p>
-                </div>
-                <div class="glass p-5 rounded-2xl">
-                    <h3 class="font-bold text-white">AI Algo Trading Bot</h3>
-                    <p class="text-sm text-slate-400">Developing algorithmic bots for automated, high-precision stock market trading.</p>
-                </div>
-                <div class="glass p-5 rounded-2xl md:col-span-2">
-                    <h3 class="font-bold text-white">Software & Web Solutions</h3>
-                    <p class="text-sm text-slate-400">Custom software development for dashboard management, automated web scraping, and robust API integration.</p>
-                </div>
-            </div>
-        </section>
+        <!-- Enquiry Interface -->
+        <section class="glass p-8 rounded-3xl">
+            <h2 class="text-2xl font-bold mb-6 text-center text-cyan-400">Let's Build Something Great</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="grid gap-4">
+                <input type="text" name="name" placeholder="Your Name" class="bg-black/50 p-4 rounded-xl border border-gray-700 outline-none focus:border-cyan-400 text-white">
+                <textarea name="message" placeholder="Describe your project requirements..." rows="3" class="bg-black/50 p-4 rounded-xl border border-gray-700 outline-none focus:border-cyan-400 text-white"></textarea>
+                <button type="submit" class="bg-gradient-to-r from-cyan-500 to-blue-600 py-4 rounded-xl font-bold text-white hover:opacity-90">Send Enquiry</button>
+            </form>
 
-        <!-- Professional Contact Section -->
-        <section id="contact" class="mt-16 mb-10 glass p-8 rounded-3xl">
-            <h2 class="text-3xl font-bold mb-8 text-center text-cyan">Get In Touch</h2>
-            
-            <!-- Enquiry Form -->
-            <div class="mb-8">
-                <p class="text-slate-400 mb-4 text-center">Have a project in mind? Send me your details below:</p>
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="grid gap-4">
-                    <input type="text" name="name" placeholder="Your Name" class="bg-slate-900 p-4 rounded-xl border border-gray-700 w-full focus:border-cyan outline-none text-white">
-                    <textarea name="message" placeholder="Tell me about your project..." rows="4" class="bg-slate-900 p-4 rounded-xl border border-gray-700 w-full focus:border-cyan outline-none text-white"></textarea>
-                    <button type="submit" class="bg-cyan-500 hover:bg-blue-600 text-white font-bold py-4 rounded-xl transition">Send Message</button>
-                </form>
-            </div>
-
-            <!-- Contact Buttons -->
-            <div class="flex flex-col md:flex-row justify-center gap-4 mt-6">
-                <a href="https://wa.me/917530919863?text=Hello%20Ashish,%20I%20am%20interested%20in%20your%20services." 
-                   class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 px-6 py-4 rounded-xl font-bold transition flex-1 text-white">
-                   WhatsApp: 7530919863
+            <!-- Contact Buttons Area -->
+            <div class="flex justify-center gap-6 mt-8">
+                <a href="https://wa.me/917530919863" class="flex items-center gap-3 bg-green-600 px-6 py-3 rounded-full font-bold hover:bg-green-700 transition">
+                    <i class="fab fa-whatsapp text-xl"></i> 7530919863
                 </a>
-                <a href="mailto:ashish95823@gmail.com" 
-                   class="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-6 py-4 rounded-xl font-bold transition flex-1 text-white">
-                   Email: ashish95823@gmail.com
+                <a href="mailto:ashish95823@gmail.com" class="bg-red-600 p-4 rounded-full text-xl hover:bg-red-700 transition">
+                    <i class="fas fa-envelope"></i>
                 </a>
             </div>
         </section>
     </div>
+
+    <!-- Floating Call Button -->
+    <a href="tel:+917530919863" class="float-call">
+        <i class="fas fa-phone"></i>
+    </a>
 
 </body>
 </html>
