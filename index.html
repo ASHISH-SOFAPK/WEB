@@ -7,12 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        body { background: #050505; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; }
+        body { background: #050505; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
         .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .name-3d { font-size: clamp(2.5rem, 12vw, 5rem); font-weight: 900; animation: colorChange 5s infinite alternate, float 3s ease-in-out infinite; }
+        .name-3d { font-size: clamp(2rem, 10vw, 4rem); font-weight: 800; text-transform: uppercase; animation: colorChange 5s infinite alternate, float 3s ease-in-out infinite; }
         @keyframes colorChange { 0% { color: #00d4ff; } 50% { color: #ffffff; } 100% { color: #4f46e5; } }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        .float-call { position: fixed; bottom: 30px; right: 30px; background: #007bff; color: white; padding: 20px; border-radius: 50%; box-shadow: 0 10px 25px rgba(0,123,255,0.4); z-index: 1000; animation: pulse 2s infinite; }
+        .float-call { position: fixed; bottom: 30px; right: 30px; background: #007bff; color: white; padding: 18px; border-radius: 50%; box-shadow: 0 10px 25px rgba(0,123,255,0.4); font-size: 20px; z-index: 1000; animation: pulse 2s infinite; }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0,123,255,0.7); } 70% { box-shadow: 0 0 0 15px rgba(0,123,255,0); } }
     </style>
 </head>
@@ -21,44 +21,54 @@
     <!-- Header -->
     <header class="py-16 text-center">
         <h1 class="name-3d">&lt;ASHISH /&gt;</h1>
-        <p class="text-cyan-400 mt-2 font-bold tracking-widest uppercase">Full-Stack & Automation Expert</p>
+        <p class="text-slate-400 mt-2 text-sm md:text-lg">Full-Stack Developer & Automation Expert</p>
     </header>
 
     <div class="max-w-lg mx-auto">
         
         <!-- Expertise Section -->
         <section class="glass p-6 rounded-3xl mb-6">
-            <h2 class="text-xl font-bold mb-4 text-cyan-400">Services I Provide</h2>
-            <div class="space-y-3">
-                <div class="bg-black/40 p-3 rounded-lg border border-gray-800">✅ Android APK Development (Flutter)</div>
-                <div class="bg-black/40 p-3 rounded-lg border border-gray-800">✅ AI Business Automation</div>
-                <div class="bg-black/40 p-3 rounded-lg border border-gray-800">✅ WhatsApp Bot Development</div>
-                <div class="bg-black/40 p-3 rounded-lg border border-gray-800">✅ AI Algo Trading Bots</div>
-                <div class="bg-black/40 p-3 rounded-lg border border-gray-800">✅ Custom Software & Web Solutions</div>
+            <h2 class="text-xl font-bold mb-4 text-cyan-400 text-center">My Professional Expertise</h2>
+            <div class="space-y-4">
+                <div class="bg-black/40 p-4 rounded-xl border border-gray-800">
+                    <h3 class="font-bold text-cyan-400">Android APK Development</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">I build high-performance mobile applications using Flutter and Android Studio. My apps feature modern UI/UX designs that ensure smooth user interaction. I focus on cross-platform compatibility to reach both Android and iOS users. Every build is optimized for speed, security, and scalability for your business.</p>
+                </div>
+                <div class="bg-black/40 p-4 rounded-xl border border-gray-800">
+                    <h3 class="font-bold text-cyan-400">AI Business Automation</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">I develop intelligent AI solutions to streamline your daily business workflows. By integrating smart logic, I automate repetitive tasks that save your time and operational costs. My solutions are data-driven, ensuring maximum efficiency and error-free execution. Transform your manual processes into a fully automated digital powerhouse.</p>
+                </div>
+                <div class="bg-black/40 p-4 rounded-xl border border-gray-800">
+                    <h3 class="font-bold text-cyan-400">WhatsApp Bot Development</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">I create advanced WhatsApp bots that serve as 24/7 virtual assistants for your customers. These bots can handle queries, process orders, and send automated notifications instantly. Built with scalable APIs, they are designed to grow with your customer base. Enhance your engagement and support systems with reliable, human-like automated messaging.</p>
+                </div>
+                <div class="bg-black/40 p-4 rounded-xl border border-gray-800">
+                    <h3 class="font-bold text-cyan-400">AI Algo Trading Bots</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">I specialize in building sophisticated algorithmic trading bots for stock market analysis. Using real-time data, my bots execute high-precision trades based on custom strategies like SMC and EMA. These bots minimize emotional trading and leverage speed to maximize your market opportunities. Designed for stability and performance in even the most volatile market conditions.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Enquiry -->
+        <!-- Enquiry Section -->
         <section class="glass p-6 rounded-3xl">
-            <h2 class="text-xl font-bold mb-4 text-center text-cyan-400">Let's Build Something Great</h2>
+            <h2 class="text-xl font-bold mb-4 text-center text-cyan-400">Let's Build Together</h2>
             <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="grid gap-3">
                 <input type="text" name="name" placeholder="Your Name" class="bg-black/50 p-3 rounded-xl border border-gray-700 w-full text-white outline-none">
-                <textarea name="message" placeholder="Describe your requirements..." rows="3" class="bg-black/50 p-3 rounded-xl border border-gray-700 w-full text-white outline-none"></textarea>
-                <button type="submit" class="bg-blue-600 py-3 rounded-xl font-bold text-white">Send Enquiry</button>
+                <textarea name="message" placeholder="Describe your project..." rows="3" class="bg-black/50 p-3 rounded-xl border border-gray-700 w-full text-white outline-none"></textarea>
+                <button type="submit" class="bg-gradient-to-r from-cyan-500 to-blue-600 py-3 rounded-xl font-bold text-white">Send Enquiry</button>
             </form>
 
             <div class="flex flex-col gap-3 mt-6">
-                <a href="https://wa.me/917530919863" class="flex items-center justify-center gap-3 bg-green-600 py-3 rounded-xl font-bold text-white">
-                    <i class="fab fa-whatsapp"></i> WhatsApp: 7530919863
+                <a href="https://wa.me/917530919863" class="flex items-center justify-center gap-3 bg-green-600 py-3 rounded-xl font-bold text-white hover:bg-green-700 transition w-full">
+                    <i class="fab fa-whatsapp"></i> 7530919863
                 </a>
-                <a href="mailto:ashish95823@gmail.com" class="flex items-center justify-center gap-3 bg-red-600 py-3 rounded-xl font-bold text-white">
+                <a href="mailto:ashish95823@gmail.com" class="flex items-center justify-center gap-3 bg-red-600 py-3 rounded-xl font-bold text-white hover:bg-red-700 transition w-full">
                     <i class="fas fa-envelope"></i> Email: ashish95823@gmail.com
                 </a>
             </div>
         </section>
     </div>
 
-    <!-- Floating Call -->
     <a href="tel:+917530919863" class="float-call"><i class="fas fa-phone"></i></a>
 
 </body>
