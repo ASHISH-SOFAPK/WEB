@@ -24,12 +24,12 @@
         <p class="text-slate-400 mt-2 text-sm md:text-lg">Full-Stack Developer & Automation Expert</p>
     </header>
 
-    <div class="max-w-lg mx-auto">
+    <div class="max-w-5xl mx-auto">
         
         <!-- Expertise Section -->
         <section class="glass p-6 rounded-3xl mb-6">
             <h2 class="text-xl font-bold mb-4 text-cyan-400 text-center">My Professional Expertise</h2>
-            <div class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="bg-black/40 p-4 rounded-xl border border-gray-800">
                     <h3 class="font-bold text-cyan-400">Android APK Development</h3>
                     <p class="text-xs text-slate-300 leading-relaxed">I build high-performance mobile applications using Flutter and Android Studio. My apps feature modern UI/UX designs that ensure smooth user interaction. I focus on cross-platform compatibility to reach both Android and iOS users. Every build is optimized for speed, security, and scalability for your business.</p>
@@ -49,24 +49,41 @@
             </div>
         </section>
 
-        <!-- New Professional Enquiry Section -->
-        <section class="glass p-8 rounded-3xl border-t-4 border-cyan-500">
-            <h2 class="text-2xl font-bold text-center text-cyan-400 mb-6">Let's Connect</h2>
-            <p class="text-slate-400 text-center mb-6 text-sm">Have a project in mind? Send me your details, and I will get back to you shortly.</p>
+        <!-- Let's Connect Section -->
+        <section class="glass p-8 rounded-3xl">
+            <h2 class="text-3xl font-bold text-white mb-2">Let's Connect</h2>
+            <p class="text-slate-400 mb-8">Have a project in mind or want to discuss opportunities? I'd love to hear from you. Let's build something amazing together.</p>
             
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="grid gap-4">
-                <input type="text" name="name" placeholder="Your Name" class="bg-black/50 p-4 rounded-xl border border-gray-700 outline-none focus:border-cyan-400 text-white w-full">
-                <textarea name="message" placeholder="Describe your project requirements..." rows="4" class="bg-black/50 p-4 rounded-xl border border-gray-700 outline-none focus:border-cyan-400 text-white w-full"></textarea>
-                <button type="submit" class="bg-gradient-to-r from-cyan-500 to-blue-600 py-4 rounded-xl font-bold text-white shadow-lg shadow-cyan-500/20 hover:scale-[1.02] transition">Send Enquiry</button>
-            </form>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Form -->
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                    <div><label class="block text-sm font-bold mb-1">Name</label><input type="text" name="name" placeholder="Your name" class="w-full bg-black/50 p-3 rounded-lg border border-gray-700 outline-none focus:border-cyan-400"></div>
+                    <div><label class="block text-sm font-bold mb-1">Email</label><input type="email" name="email" placeholder="your@email.com" class="w-full bg-black/50 p-3 rounded-lg border border-gray-700 outline-none focus:border-cyan-400"></div>
+                    <div><label class="block text-sm font-bold mb-1">Message</label><textarea name="message" placeholder="Tell me about your project..." rows="3" class="w-full bg-black/50 p-3 rounded-lg border border-gray-700 outline-none focus:border-cyan-400"></textarea></div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-purple-600 py-3 rounded-lg font-bold">Send Message</button>
+                </form>
 
-            <div class="flex flex-col gap-4 mt-8">
-                <a href="https://wa.me/917530919863" class="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 py-4 rounded-xl font-bold transition">
-                    <i class="fab fa-whatsapp text-lg"></i> WhatsApp: 7530919863
-                </a>
-                <a href="mailto:ashish95823@gmail.com" class="flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 py-4 rounded-xl font-bold transition">
-                    <i class="fas fa-envelope text-lg"></i> Email: ashish95823@gmail.com
-                </a>
+                <!-- Contact Info & Socials -->
+                <div class="space-y-6">
+                    <div class="bg-black/40 p-4 rounded-xl border border-gray-700">
+                        <h3 class="font-bold mb-3">Contact Information</h3>
+                        <p class="text-sm text-slate-400"><i class="fas fa-map-marker-alt mr-2"></i>Location: Bengaluru, India</p>
+                        <p class="text-sm text-slate-400 mt-2"><i class="fas fa-envelope mr-2"></i>Email: ashishpal438@gmail.com</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-3">Follow Me</h3>
+                        <div class="flex gap-4 text-2xl">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-green-900/20 p-4 rounded-xl border border-green-800">
+                        <p class="text-green-400 text-sm font-bold"><i class="fas fa-circle text-xs mr-2"></i>Available for Work</p>
+                        <p class="text-xs text-slate-400 mt-1">Currently open to freelance projects and full-time opportunities. Let's discuss how I can help bring your ideas to life.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
