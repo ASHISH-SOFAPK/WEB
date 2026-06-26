@@ -3,70 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASHISH | Dev Studio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Ashish | Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --gold: #d4af37; --bg: #050505; }
-        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; margin: 0; }
-        .container { max-width: 1000px; margin: auto; padding: 40px; }
-        
-        /* Chart Box */
-        .chart-container { margin: 40px 0; border: 2px solid var(--gold); border-radius: 15px; overflow: hidden; height: 500px; }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .card { background: rgba(255,255,255,0.03); padding: 30px; border-radius: 20px; border: 1px solid #222; }
-        .enquiry { background: rgba(212, 175, 55, 0.05); padding: 50px; border-radius: 25px; margin-top: 60px; text-align: center; border: 1px solid var(--gold); }
-        input, textarea { width: 90%; padding: 15px; margin: 10px 0; border-radius: 12px; border: 1px solid #333; background: #000; color: #fff; }
-        .submit-btn { background: var(--gold); color: #000; border: none; padding: 18px 50px; border-radius: 50px; font-weight: bold; cursor: pointer; }
+        body { background-color: #0f172a; color: white; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
-<body>
+<body class="p-6">
 
-<div class="container">
-    <h1 style="text-align:center; color: var(--gold);">ASHISH</h1>
-    
-    <!-- TradingView Chart Widget -->
-    <div class="chart-container">
-        <div class="tradingview-widget-container" style="height:100%;width:100%">
-            <div id="tradingview_chart" style="height:100%;width:100%"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-            <script type="text/javascript">
-            new TradingView.widget({
-              "autosize": true,
-              "symbol": "NSE:NIFTY",
-              "interval": "D",
-              "timezone": "Asia/Kolkata",
-              "theme": "dark",
-              "style": "1",
-              "locale": "en",
-              "toolbar_bg": "#f1f3f6",
-              "enable_publishing": false,
-              "container_id": "tradingview_chart"
-            });
-            </script>
+    <!-- Hero Section -->
+    <header class="text-center py-20">
+        <h1 class="text-5xl font-bold text-cyan-400">&lt;Ashish /&gt;</h1>
+        <p class="text-xl mt-4 text-gray-300">Building High-Performance Mobile & Web Experiences</p>
+        <div class="mt-8 flex justify-center gap-4">
+            <a href="https://wa.me/917530919863" class="bg-cyan-500 px-8 py-3 rounded-full font-bold">Hire Me</a>
         </div>
-    </div>
+    </header>
 
-    <div class="grid">
-        <div class="card"><i class="fas fa-robot"></i> <h2>Algo Trading</h2><p>High-frequency MQL5/PineScript bots.</p></div>
-        <div class="card"><i class="fas fa-mobile-alt"></i> <h2>APK Dev</h2><p>Custom Android applications.</p></div>
-        <div class="card"><i class="fab fa-whatsapp"></i> <h2>WhatsApp Bot</h2><p>AI-driven business automation.</p></div>
-    </div>
+    <!-- Tech Stack -->
+    <section class="glass p-8 rounded-3xl mb-10">
+        <h2 class="text-2xl font-bold text-cyan-400 mb-6">Tech Stack</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-800 p-4 rounded-xl">Mobile: Flutter, Dart, Android Studio</div>
+            <div class="bg-gray-800 p-4 rounded-xl">Web: Python, HTML, CSS, JS</div>
+            <div class="bg-gray-800 p-4 rounded-xl">AI: Bot Development, Automation</div>
+            <div class="bg-gray-800 p-4 rounded-xl">Database: Firebase, SQLite</div>
+        </div>
+    </section>
 
-    <div class="enquiry">
-        <h2>Initiate Project Connection</h2>
-        <input type="text" id="name" placeholder="Your Name" required><br>
-        <textarea id="message" placeholder="Describe your project..." rows="4"></textarea><br>
-        <button onclick="sendWhatsApp()" class="submit-btn">SEND TO WHATSAPP</button>
-    </div>
-</div>
+    <!-- Projects -->
+    <section>
+        <h2 class="text-2xl font-bold text-cyan-400 mb-6">Featured Projects</h2>
+        <div class="glass p-6 rounded-3xl">
+            <h3 class="text-xl">GeM Tender Bot</h3>
+            <p class="text-gray-400 mt-2">Automated tender downloading and OCR processing software.</p>
+        </div>
+        <div class="glass p-6 rounded-3xl mt-4">
+            <h3 class="text-xl">Mukhda AI</h3>
+            <p class="text-gray-400 mt-2">Face personality analysis using Flet & AI integration.</p>
+        </div>
+    </section>
 
-<script>
-    function sendWhatsApp() {
-        const name = document.getElementById('name').value;
-        const msg = document.getElementById('message').value;
-        window.open(`https://wa.me/7530919863?text=Project Inquiry from ${name}: ${msg}`, '_blank');
-    }
-</script>
+    <!-- Footer Contact -->
+    <footer class="mt-20 border-t border-gray-700 pt-10 text-center">
+        <p class="text-gray-400">Let's connect: ashish95823@gmail.com</p>
+        <div class="mt-4">
+            <a href="https://wa.me/917530919863" class="text-green-400 font-bold">WhatsApp: 7530919863</a>
+        </div>
+    </footer>
+
 </body>
 </html>
