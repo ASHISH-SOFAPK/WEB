@@ -22,7 +22,7 @@
 
     <div class="max-w-4xl mx-auto p-6">
         
-        <!-- Tech Stack Section -->
+        <!-- Expertise Section -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold mb-6 text-cyan">My Expertise</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -42,26 +42,37 @@
                     <h3 class="font-bold text-white">AI Algo Trading Bot</h3>
                     <p class="text-sm text-slate-400">Developing algorithmic bots for automated, high-precision stock market trading.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section>
-            <h2 class="text-2xl font-bold mb-6 text-cyan">Featured Projects</h2>
-            <div class="grid grid-cols-1 gap-6">
-                <div class="glass p-6 rounded-2xl">
-                    <h3 class="font-bold text-white text-lg">Software & Web Solutions</h3>
-                    <p class="text-sm mt-2 text-slate-300">Custom software development for dashboard management, automated web scraping, and robust API integration.</p>
+                <div class="glass p-5 rounded-2xl md:col-span-2">
+                    <h3 class="font-bold text-white">Software & Web Solutions</h3>
+                    <p class="text-sm text-slate-400">Custom software development for dashboard management, automated web scraping, and robust API integration.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="mt-16 mb-10 text-center glass p-8 rounded-3xl">
-            <h2 class="text-2xl font-bold mb-6">Let's Connect</h2>
-            <div class="flex justify-center gap-4">
-                <a href="https://wa.me/917530919863" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold transition">WhatsApp</a>
-                <a href="mailto:ashish95823@gmail.com" class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-bold transition">Email Me</a>
+        <!-- Professional Contact Section -->
+        <section id="contact" class="mt-16 mb-10 glass p-8 rounded-3xl">
+            <h2 class="text-3xl font-bold mb-8 text-center text-cyan">Get In Touch</h2>
+            
+            <!-- Enquiry Form -->
+            <div class="mb-8">
+                <p class="text-slate-400 mb-4 text-center">Have a project in mind? Send me your details below:</p>
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="grid gap-4">
+                    <input type="text" name="name" placeholder="Your Name" class="bg-slate-900 p-4 rounded-xl border border-gray-700 w-full focus:border-cyan outline-none text-white">
+                    <textarea name="message" placeholder="Tell me about your project..." rows="4" class="bg-slate-900 p-4 rounded-xl border border-gray-700 w-full focus:border-cyan outline-none text-white"></textarea>
+                    <button type="submit" class="bg-cyan-500 hover:bg-blue-600 text-white font-bold py-4 rounded-xl transition">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Buttons -->
+            <div class="flex flex-col md:flex-row justify-center gap-4 mt-6">
+                <a href="https://wa.me/917530919863?text=Hello%20Ashish,%20I%20am%20interested%20in%20your%20services." 
+                   class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 px-6 py-4 rounded-xl font-bold transition flex-1 text-white">
+                   WhatsApp: 7530919863
+                </a>
+                <a href="mailto:ashish95823@gmail.com" 
+                   class="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-6 py-4 rounded-xl font-bold transition flex-1 text-white">
+                   Email: ashish95823@gmail.com
+                </a>
             </div>
         </section>
     </div>
