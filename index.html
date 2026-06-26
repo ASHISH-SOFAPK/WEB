@@ -5,68 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashish | Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: white; font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        body { background: #050505; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .text-cyan { color: #00d4ff; }
     </style>
 </head>
-<body class="p-4 md:p-10">
+<body>
 
-    <!-- Hero Section -->
-    <section class="text-center py-16">
-        <h1 class="text-6xl font-bold mb-4">&lt;Ashish /&gt;</h1>
-        <p class="text-2xl text-gray-400">Building Cross-Platform Mobile Experiences</p>
-        <div class="mt-8 flex justify-center gap-4">
-            <button class="bg-cyan-500 hover:bg-cyan-600 px-8 py-3 rounded-full font-bold transition">View My Work</button>
-            <button class="border border-gray-600 px-8 py-3 rounded-full font-bold hover:bg-white hover:text-black transition">Get In Touch</button>
-        </div>
-    </section>
+    <!-- Header Section -->
+    <header class="hero-gradient p-12 text-center border-b border-gray-800">
+        <h1 class="text-5xl font-extrabold text-white">&lt;Ashish /&gt;</h1>
+        <p class="text-cyan mt-3 text-lg">Full-Stack Developer & Automation Expert</p>
+    </header>
 
-    <!-- Tech Stack -->
-    <section class="max-w-4xl mx-auto glass p-8 rounded-3xl mb-12">
-        <h2 class="text-3xl font-bold mb-8 text-cyan">Tech Stack</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="p-4 border-l-4 border-cyan">
-                <h3 class="font-bold text-xl">Mobile Development</h3>
-                <p class="text-gray-400">Flutter, Dart, Android Studio, Xcode</p>
+    <div class="max-w-4xl mx-auto p-6">
+        
+        <!-- Tech Stack Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-cyan">My Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="glass p-5 rounded-2xl">
+                    <h3 class="font-bold text-white">Android APK Development</h3>
+                    <p class="text-sm text-slate-400">Building custom native and cross-platform apps using Flutter and Android Studio.</p>
+                </div>
+                <div class="glass p-5 rounded-2xl">
+                    <h3 class="font-bold text-white">AI Automation</h3>
+                    <p class="text-sm text-slate-400">Smart AI solutions for business workflows and data-driven tasks.</p>
+                </div>
+                <div class="glass p-5 rounded-2xl">
+                    <h3 class="font-bold text-white">WhatsApp Bot Development</h3>
+                    <p class="text-sm text-slate-400">Automated messaging bots to scale customer support and engagement.</p>
+                </div>
+                <div class="glass p-5 rounded-2xl">
+                    <h3 class="font-bold text-white">AI Algo Trading Bot</h3>
+                    <p class="text-sm text-slate-400">Developing algorithmic bots for automated, high-precision stock market trading.</p>
+                </div>
             </div>
-            <div class="p-4 border-l-4 border-cyan">
-                <h3 class="font-bold text-xl">Backend & Database</h3>
-                <p class="text-gray-400">Python, Node.js, Firebase, MongoDB</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects -->
-    <section class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold mb-8 text-cyan">Featured Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass p-6 rounded-2xl">
-                <h3 class="font-bold text-lg">GeM Tender Bot</h3>
-                <p class="text-sm text-gray-400 mt-2">Automated OCR and Excel data processing.</p>
+        <!-- Projects Section -->
+        <section>
+            <h2 class="text-2xl font-bold mb-6 text-cyan">Featured Projects</h2>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="glass p-6 rounded-2xl">
+                    <h3 class="font-bold text-white text-lg">Software & Web Solutions</h3>
+                    <p class="text-sm mt-2 text-slate-300">Custom software development for dashboard management, automated web scraping, and robust API integration.</p>
+                </div>
             </div>
-            <div class="glass p-6 rounded-2xl">
-                <h3 class="font-bold text-lg">Mukhda AI</h3>
-                <p class="text-sm text-gray-400 mt-2">Face personality reading with Flet UI.</p>
-            </div>
-            <div class="glass p-6 rounded-2xl">
-                <h3 class="font-bold text-lg">Trading Dashboard</h3>
-                <p class="text-sm text-gray-400 mt-2">SMC and Option Chain analysis tool.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Footer -->
-    <footer class="max-w-4xl mx-auto mt-20 p-8 glass rounded-3xl text-center">
-        <h2 class="text-2xl font-bold mb-6">Let's Connect</h2>
-        <div class="flex justify-center gap-6">
-            <a href="https://wa.me/917530919863" class="bg-green-600 px-6 py-2 rounded-lg font-bold">WhatsApp</a>
-            <a href="mailto:ashish95823@gmail.com" class="bg-red-600 px-6 py-2 rounded-lg font-bold">Email Me</a>
-        </div>
-        <p class="mt-8 text-gray-500">© 2026 Ashish. All rights reserved.</p>
-    </footer>
+        <!-- Contact Section -->
+        <section class="mt-16 mb-10 text-center glass p-8 rounded-3xl">
+            <h2 class="text-2xl font-bold mb-6">Let's Connect</h2>
+            <div class="flex justify-center gap-4">
+                <a href="https://wa.me/917530919863" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold transition">WhatsApp</a>
+                <a href="mailto:ashish95823@gmail.com" class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-bold transition">Email Me</a>
+            </div>
+        </section>
+    </div>
 
 </body>
 </html>
